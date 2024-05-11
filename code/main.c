@@ -192,6 +192,7 @@ int main(int argc, char *argv[])
 
 						char responseBuffer[4096] = {0};
 						sprintf(responseBuffer, "HTTP/1.1 200 OK\r\n");
+						write(acceptSocket, responseBuffer, strlen(responseBuffer));
 					}
 					else
 					{
